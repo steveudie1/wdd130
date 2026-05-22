@@ -21,6 +21,17 @@
     height: auto;
 }
 
+.hero article {}
+
+.hero h1 {
+    position: absolute;
+
+}
+
+.hero article {
+    position: absolute;
+}
+
 h1 {
     position: absolute;
     top: 200px;
