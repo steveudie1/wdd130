@@ -1,0 +1,20 @@
+div {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+
+}
+
+.grid-container {
+    background-color: yellow;
+    padding: 16px;
+
+}
+
+.grid-item {
+    background-color: blue;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+
+}
