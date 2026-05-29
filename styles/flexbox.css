@@ -1,0 +1,40 @@
+body {}
+
+.flex-container {
+    border: 3px dashed darkcyan;
+    background-color: lightyellow;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.flex-item {
+    width: 350px;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 /0.2);
+    padding: 0.5rem;
+    background-color: black;
+    flex-direction: row;
+    color: black;
+}
+
+.item1 {
+    min-height: 100px;
+    background-color: bisque;
+
+}
+
+.item2 {
+    min-height: 200px;
+    color: blueviolet;
+    background-color: blueviolet;
+}
+
+.item3 {
+    min-height: 300px;
+    background-color: brown;
+}

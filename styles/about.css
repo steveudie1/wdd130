@@ -1,0 +1,525 @@
+:root {
+    --primary-color: #173f67;
+    --secondary-color: #4caf50;
+    --accent1-color: #ecf0f1;
+    --accent2-color: #bdc3c7;
+    --heading-color: #00008b;
+    --font-color: #fff;
+    --shadow-color: grey;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+}
+
+main h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-family: cursive;
+}
+
+header {
+    margin: 1rem;
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: center;
+    max-width: 100%;
+}
+
+header p,
+nav a {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+h1,
+h2 {
+    color: var(--primary-color);
+    font-family: var(--font-family);
+}
+
+nav {
+    justify-self: end;
+    padding-right: 1rem;
+}
+
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+footer nav a {
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+footer nav img {
+    width: 30px;
+    height: auto;
+}
+
+footer p {
+    color: var(--font-color);
+    font-size: 1.2rem;
+
+}
+
+/* Global Selectors*/
+
+.hero,
+.history,
+.pictures,
+footer {
+    margin: 1rem;
+}
+
+/* Header classes*/
+.logo img {
+    margin: 0rem .25rem 0 2rem;
+    width: 150px;
+    height: auto;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+}
+
+.navigation li {
+
+    justify-content: flex-end;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--font-color);
+    padding: 0.5rem 2rem;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent,
+            rgba(255, 255, 255, .4), transparent);
+    transition: 0.5s;
+}
+
+header:hover::after {
+    left: 100%;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+/* Hero classes */
+
+.hero {
+    position: relative;
+    display: block;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 20px;
+    padding: 8px 0;
+    font-size: 36px;
+    text-align: center;
+    background-color: var(--font-color);
+    opacity: .8;
+}
+
+.article {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    opacity: 0.7;
+    background-color: var(--font-color);
+    border: 1px solid #000;
+    padding: .65rem;
+    overflow: auto;
+    text-align: justify;
+}
+
+.article h2 {
+    margin-left: 20px;
+}
+
+.article img {
+    width: 250px;
+    height: auto;
+    float: right;
+    margin-left: 1rem;
+    border-radius: 10px;
+    border: 2px solid #302f2f;
+    box-shadow: 0 0 30px var(--shadow-color);
+}
+
+.article p {
+    display: block;
+    overflow: hidden;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.history,
+.adventure,
+.contact,
+.map {
+    background-color: var(--accent2-color);
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.history h2,
+.adventure h1 {
+
+    grid-column: 1/4;
+    font-size: 2rem;
+    padding-bottom: 30px;
+}
+
+.history img,
+.adventure img {
+    width: 320px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #d6d3d3;
+    box-shadow: 0 0 70px var(--shadow-color);
+}
+
+.history p,
+.adventure p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 2px;
+    margin: 3px;
+    color: var(--primary-color);
+}
+
+.pictures {
+    background-color: var(--accent1-color);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+}
+
+.pictures h2 {
+    grid-column: 1/6;
+    padding: 50px;
+    font-size: 2rem;
+
+}
+
+.pictures img {
+    width: 200px;
+    height: 140px;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px var(--shadow-color);
+}
+
+.pictures figure p {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* CSS for contact website*/
+
+/*info section */
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../images/contactimg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-weight: 300;
+    color: var(--font-color);
+}
+
+.content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--font-color);
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: var(--font-color);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.icon {
+    min-width: 60px;
+    height: 60px;
+    background: var(--font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #00008b;
+}
+
+.text {
+    margin-left: 20px;
+}
+
+.text p {
+    display: flex;
+    margin-left: 10px;
+    font-size: 16px;
+    color: var(--font-color);
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.text h3 {
+    font-weight: 500;
+}
+
+.contactForm {
+    width: 40%;
+    padding: 40px;
+    background: var(--font-color);
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.inputBox input,
+.inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span,
+.inputBox textarea:focus ~ span,
+.inputBox textarea:valid ~ span {
+    color: var(--secondary-color);
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.inputBox input[type="submit"] {
+    width: 100px;
+    background: var(--secondary-color);
+    color: var(--font-color);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+fieldset {
+    display: flexbox;
+    margin: 0;
+    padding: 1rem;
+    border: 1.5px solid var(--secondary-color);
+}
+
+legend {
+    padding: .5rem;
+    color: var(--primary-color);
+
+}
+
+label {
+    color: var(--primary-color);
+}
+
+input[type="radio"] {
+    accent-color: var(--secondary-color);
+    width: 18px;
+    height: 18px;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    vertical-align: text-bottom;
+    accent-color: var(--secondary-color);
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 991px) {
+    .contact {
+        padding: 50px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container .contactInfo {
+        margin-bottom: 40px;
+    }
+
+    .container .contactInfo {
+        width: 100%;
+    }
+
+}
+
+/* Map */
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10em;
+}
+
+.map .box {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map .box h1 {
+    color: var(--primary-color);
+    font-size: 38px;
+}
+
+iframe {
+    border-radius: 20px;
+    border: 2px solid var(--primary-color);
+    width: 400px;
+    height: 400px;
+    transition: 0.3s ease-in-out;
+}
+
+iframe:hover {
+    transform: scale(1.1);
+}
+
+/* Adventure section */
+.adventure img {
+    width: 350px;
+    height: auto;
+}
+
+figure {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+figcaption {
+    margin-top: .5em;
+}
+
+figcaption .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+figcaption .subtitle {
+    font-size: .9em;
+    margin: 0;
+    color: var(--primary-color);
+}

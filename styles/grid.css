@@ -1,6 +1,11 @@
 div {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 2fr;
+    grid-template-columns: 150px auto;
+    -ms-grid-row-align: stretch;
+    background-color: #8cclec;
+    padding: 10px;
+    justify-content: center;
+    align-grid-item: center;
 
 }
 
