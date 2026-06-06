@@ -484,4 +484,360 @@ footer p {
     .contactForm {
         width: 100%;
     }
+
+    /* ==========================================
+       1. VARIABLES & DESIGN TOKENS
+       ========================================== */
+
+    /* ==========================================
+       2. GLOBAL RESETS & GENERAL LAYOUT
+       ========================================== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: var(--body-font);
+    }
+
+    body {
+        background-color: #ffffff;
+        color: #333333;
+        line-height: 1.5;
+    }
+
+    header,
+    main,
+    footer {
+        max-width: 1000px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* ==========================================
+       3. HEADER & NAVIGATION (Wireframe Layout)
+       ========================================== */
+    header {
+        background-color: var(--wireframe-purple);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        border: 1px solid #777;
+        margin-top: 10px;
+    }
+
+    .logo img {
+        width: 100px;
+        height: auto;
+        background-color: #ccc;
+        /* Wireframe placeholder fallback */
+        display: block;
+    }
+
+    .navigation {
+        display: flex;
+        list-style: none;
+        border: 1px solid #777;
+        background: #fff;
+    }
+
+    .navigation li {
+        border-right: 1px solid #777;
+    }
+
+    .navigation li:last-child {
+        border-right: none;
+    }
+
+    .navigation a {
+        text-decoration: none;
+        color: #000;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        display: block;
+    }
+
+    .navigation a:hover,
+    .navigation a.active {
+        background-color: var(--primary-color);
+        color: #ffffff;
+    }
+
+    /* ==========================================
+       4. MAIN CONTENT & FORM LAYOUT
+       ========================================== */
+    main {
+        padding: 2rem 1rem;
+    }
+
+    .company-heading {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .company-heading h1 {
+        font-size: 2.2rem;
+        color: #000;
+        margin-bottom: 0.5rem;
+    }
+
+    .company-heading p,
+    .company-heading .phone,
+    .company-heading .email {
+        font-size: 1.1rem;
+        color: #222;
+        margin-bottom: 0.2rem;
+    }
+
+    /* Side-by-Side Map & Form Grid */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        align-items: start;
+        margin-bottom: 3rem;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 380px;
+        border: 1px solid var(--border-color);
+    }
+
+    /* Form Styles matching Wireframe exactly */
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .form-group {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        align-items: center;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        font-size: 0.95rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        width: 100%;
+        padding: 6px 10px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    /* Radio alignment styling */
+    .form-group-radio {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        align-items: start;
+    }
+
+    .radio-label-heading {
+        font-weight: bold;
+        font-size: 0.95rem;
+    }
+
+    .radio-options {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .radio-options label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+        cursor: pointer;
+    }
+
+    /* Checkbox alignment */
+    .form-group-checkbox {
+        margin-left: 100px;
+    }
+
+    .form-group-checkbox label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Gray Button centered/stretched under form input section */
+    .submit-btn {
+        margin-left: 100px;
+        background-color: #e0e0e0;
+        color: #000;
+        border: 1px solid var(--border-color);
+        padding: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background 0.2s;
+    }
+
+    .submit-btn:hover {
+        background-color: var(--secondary-color);
+        color: white;
+    }
+
+    /* ==========================================
+       5. EMPLOYEE PROFILE SECTION
+       ========================================== */
+    .employee-section {
+        border: 1px solid var(--border-color);
+        background-color: var(--light-bg);
+        padding: 1.5rem;
+        text-align: center;
+        border-radius: 4px;
+        margin-bottom: 2rem;
+    }
+
+    .employee-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: #000;
+    }
+
+    .employee-grid {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .employee-card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avatar-placeholder {
+        width: 120px;
+        height: 120px;
+        background-color: #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .avatar-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .employee-card figcaption {
+        font-size: 0.95rem;
+        color: #333;
+    }
+
+    /* ==========================================
+       6. FOOTER STYLING
+       ========================================== */
+    footer {
+        background-color: var(--wireframe-purple);
+        border: 1px solid #777;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        margin-bottom: 10px;
+    }
+
+    footer p {
+        color: navy;
+        font-weight: 500;
+    }
+
+    .socialmedia {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .socialmedia img {
+        width: 32px;
+        height: 32px;
+        border: 1px solid #555;
+        background: #fff;
+        padding: 2px;
+    }
+
+    @media (max-width: 768px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .form-group,
+        .form-group-radio {
+            grid-template-columns: 1fr;
+            gap: 0.3rem;
+        }
+
+        .form-group-checkbox,
+        .submit-btn {
+            margin-left: 0;
+        }
+
+        header,
+        {
+        text-align: right;
+        /* flex-direction: column; */
+        gap: 1rem;
+
+    }
+
+    /* ==========================================
+           9. FOOTER LAYOUT
+           ========================================== */
+    footer {
+        background-color: var(--wireframe-purple);
+        border: 1px solid #777;
+
+        /* 1. Turn footer into a flex container */
+        display: flex;
+
+        /* 2. Push elements to opposite ends (text left, icons right) */
+        justify-content: space-between;
+
+        /* 3. Center everything vertically */
+        align-items: center;
+
+        padding: 1.5rem 2rem;
+        margin-bottom: 10px;
+    }
+
+    footer p {
+        color: #000;
+        font-weight: 500;
+        margin: 0;
+        /* Prevents unwanted spacing pushing items down */
+    }
+
+    .socialmedia {
+        display: flex;
+        gap: 0.5rem;
+
+        /* Alternative fix: If you don't have a <p> tag on the left, 
+               this forces the social block to snap to the far right */
+        margin-left: auto;
+    }
+
+    .socialmedia img {
+        width: 32px;
+        height: 32px;
+        border: 1px solid #555;
+        background: #fff;
+        padding: 2px;
+    }
+}
 }
