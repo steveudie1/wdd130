@@ -20,7 +20,7 @@
         <nav>
             <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about">About Us</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="trips.html">Trips</a></li>
                 <li><a href="contact.html" class="active">Contact Us</a></li>
             </ul>
@@ -60,12 +60,21 @@
                     <div class="form-group-radio">
                         <span class="radio-label-heading">Message Purpose</span>
                         <div class="radio-options">
-                            <label><input type="radio" name="purpose" value="general" checked>
-                                General Inquiry</label>
-                            <label><input type="radio" name="purpose" value="reservation">
-                                Reservation Question</label>
-                            <label><input type="radio" name="purpose" value="suggestion"> Website
-                                Suggestion</label>
+                            <label for="purpose-general">
+                                <input type="radio" id="purpose-general" name="purpose"
+                                  value="general" checked>
+                                General Inquiry
+                            </label>
+                            <label for="purpose-reservation">
+                                <input type="radio" id="purpose-reservation" name="purpose"
+                                  value="reservation">
+                                Reservation Question
+                            </label>
+                            <label for="purpose-suggestion">
+                                <input type="radio" id="purpose-suggestion" name="purpose"
+                                  value="suggestion">
+                                Website Suggestion
+                            </label>
                         </div>
                     </div>
 
@@ -76,7 +85,7 @@
                     </div>
 
                     <div class="form-group-checkbox">
-                        <label>
+                        <label for="newsletter">
                             <input type="checkbox" id="newsletter" name="newsletter" checked>
                             Please Subscribe me to the monthly newsletter
                         </label>
@@ -115,7 +124,7 @@
     </main>
 
     <footer>
-
+        <p>© 2026 🛶 The Glitch Rafting Company 🛶 Stephen Udie</p>
 
         <nav class="socialmedia">
             <a href="https://web.facebook.com/steveudie" target="_blank" aria-label="Facebook">
