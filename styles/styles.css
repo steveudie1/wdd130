@@ -8,6 +8,7 @@ nav {
     background-color: darkblue;
     padding: 10px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -36,8 +37,19 @@ nav a {
     display: block;
 }
 
+body {
+    font-size: 16px;
+    font-family: Roboto, Arial, sans-serif;
+
+}
+
 main {
-    max-width: 70%;
+    margin: 1rem;
+    columns: 2;
+}
+
+main {
+    display: block;
 }
 
 p {
@@ -51,6 +63,7 @@ aside {
 }
 
 aside img {
+    float: inline-start;
     width: 200px;
     height: auto;
 }
@@ -67,10 +80,11 @@ aside h2 {
 
 }
 
+header,
+.grid,
 footer {
-    margin-top: 15em;
-    border-top: 1px solid #000;
-    text-align: center;
+    max-width: 840px;
+    margin: 0 auto;
 }
 
 /* Class Selector */
@@ -85,9 +99,36 @@ footer {
 
 aside {
     width: 20em;
-    text-align: center;
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    border: 1px solid rgba(0 0 0 1);
+}
+
+aside {
+    display: block;
 }
 
 .indent {
     padding-left: 2rem;
+}
+
+nav {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }

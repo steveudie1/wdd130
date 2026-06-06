@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen Udie | WDD 130</title>
+    <meta name="author" content="Stephen Udie">
+    <meta name="description" content="Stephen Udie's BYU Idaho student WDD 130 course home page">
+    <link rel="stylesheet" href="styles/poll-form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+</head>
+
+<body>
+    <form>
+        <label for="fullname">Full Nmame</label>
+        <input type="text" id="fullname" name="fullname" required>
+        <label for="usermail">Email:</label>
+        <input type="email" id="usermail" name="usermail" required>
+        <label for=" quantity">Select Quality</label>
+        <select name="quantity" id="quantity">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+        <label for="browser">What is your favorite internet browser</label>
+        <select id="browser" name="browser">
+            <option value="chrome">Chrome</option>
+            <option value="firefox">Firefox</option>
+            <option value="edge">Edge</option>
+            <option value="brave">Brave</option>
+            <option value="other">Other</option>
+
+        </select>
+        <label for="pet">Do you have a house hold pet</label>
+        <input type="checkbox" id="pet" name="pet">
+        <label for="feedback">List the place you lived:</label>
+        <textarea id="feedback" name="feedback" rows="4"
+          placeholder="Stillwater Florida, Amterdam, Timbuktu Mali"></textarea>
+        <button type="submit">Submit Poll</button>
+
+
+    </form>
+
+
+    <footer>
+        <p> 2026 Stephen Udie | Lagos, Nigeria</p>
+    </footer>
+</body>
+
+</html>
