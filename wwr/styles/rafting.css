@@ -490,3 +490,699 @@ footer p {
         margin-left: 0;
     }
 }
+
+/* ==========================================
+   1. Reset & Global Styles
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Constrain the layout width to look like a clean, centered web page */
+header,
+main,
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ==========================================
+   2. Header & Navigation (Purple Bar)
+   ========================================== */
+header {
+    background-color: #d1c4e9;
+    /* Light purple to match wireframe */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-top: 10px;
+}
+
+.logo img {
+    height: 60px;
+    /* Adjust based on your logo size */
+    width: auto;
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    border: 1px solid #333;
+    /* Combined border container as seen in wireframe */
+    background-color: #fff;
+}
+
+.navigation li {
+    border-right: 1px solid #333;
+}
+
+.navigation li:last-child {
+    border-right: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* .navigation a:hover {
+    background-color: #f0f0f0;
+} */
+
+/* ==========================================
+   3. Main Content & Sections
+   ========================================== */
+main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Common box framing to replicate the wireframe sections */
+.hero,
+.history,
+.pictures {
+
+    margin-bottom: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* --- Hero Section (White Water Rafting) --- */
+.hero {
+    position: relative;
+    padding: 0;
+    /* Let background image or layout handle internal space */
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Making the large hero image fill the background behind the content box */
+.hero > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 15px;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 2.5rem;
+}
+
+/* The transparent content card overlay inside the hero section */
+.article {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #333;
+    margin: 20px;
+    padding: 20px;
+    max-width: 85%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.article img {
+    width: 120px;
+    height: auto;
+    order: 2;
+    /* Pushes the small image to the right side inside the card */
+}
+
+.article p {
+    flex: 1;
+}
+
+/* --- History Section --- */
+.history h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Grid matching the 3-column split: Text | Image | Text */
+.history {
+    display: grid;
+    grid-template-columns: 1fr 300px 1fr;
+    gap: 20px;
+    align-items: center;
+    text-align: left;
+}
+
+/* .history h2 {
+    grid-column: 1 / -1;
+    /* Spans across all 3 columns */
+text-align: center;
+}
+
+*/ .history img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #333;
+    background-color: #311b92;
+    /* Dark purple container block color from wireframe */
+}
+
+/* Wrapping paragraphs to flow into the left and right positions */
+.history p:nth-of-type(1) {
+    grid-column: 1;
+}
+
+/* Combining your 2nd and 3rd paragraphs into the right column */
+.history p:nth-of-type(2),
+.history p:nth-of-type(3) {
+    grid-column: 3;
+}
+
+/* --- Adventure Awaits Gallery --- */
+.pictures h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.pictures {
+    display: block;
+    /* Overrides default block behavior to use grid layout below */
+}
+
+/* Grid layout creating 5 equal columns for the figures */
+.pictures {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.pictures h2 {
+    grid-column: 1 / -1;
+}
+
+.pictures figure {
+    background-color: #eaeaea;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pictures img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.pictures figcaption {
+    font-size: 0.9rem;
+    font-weight: bold;
+
+}
+
+/* ==========================================
+   4. Footer Section (Purple Bar)
+   ========================================== */
+footer {
+
+    /* Light purple to match wireframe */
+    border: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-weight: 500;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 10px;
+}
+
+.socialmedia a {
+    display: inline-block;
+    border: 1px solid #333;
+    /* Creates the box framing around icons */
+    background-color: #fff;
+    padding: 5px;
+}
+
+.socialmedia img {
+    width: 40px;
+    height: 40px;
+    display: flex;
+}
+
+/* ==========================================
+   5. Responsive Design (Mobile Friendly)
+   ========================================== */
+@media (max-width: 768px) {
+
+    header,
+    footer,
+    .article,
+    .history,
+    .pictures {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .navigation {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .navigation li {
+        border-right: none;
+        border-bottom: 1px solid #333;
+    }
+
+    .article {
+        max-width: 95%;
+        flex-direction: column;
+    }
+
+    .article img {
+        order: 0;
+        /* Returns image to top on smaller screens */
+    }
+
+    .history p:nth-of-type(1),
+    .history p:nth-of-type(2),
+    .history p:nth-of-type(3) {
+        grid-column: span 1;
+    }
+
+    .history img {
+        grid-column: span 1;
+        order: -1;
+        /* Pushes history image near the title on mobile */
+    }
+
+    .pictures {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .pictures {
+        grid-template-columns: 2fr;
+        /* 1 column on small phones */
+    }
+}
+
+/* ==========================================================================
+   1. GLOBAL STYLES & RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+}
+
+h1,
+h2,
+h3 {
+
+    /* Deep River Blue */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+.logo img {
+    height: 60px;
+
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navigation a {
+    color: #e2e8f0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #ffffff;
+    background-color: #ff6b35;
+    /* High-energy Accent Orange */
+}
+
+/* ==========================================================================
+   3. HERO SECTION (HOME & GENERAL)
+   ========================================================================== */
+.hero {
+    position: relative;
+    text-align: center;
+
+}
+
+.hero > img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.hero h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 3rem;
+    width: 90%;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-cta {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.hero-cta p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Reusable Buttons */
+.cta-btn,
+.sub-btn,
+.book-btn {
+    display: inline-block;
+    background-color: #ff6b35;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cta-btn:hover,
+.sub-btn:hover,
+.book-btn:hover {
+    background-color: #004e64;
+    /* Alternate Deep Water Blue */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   4. HOME PAGE CONTENT (GRID & LAYOUTS)
+   ========================================================================== */
+.home-grid {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.home-grid h2 {
+    margin-bottom: 2.5rem;
+    position: relative;
+    font-size: 2.2rem;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid #1a365d;
+}
+
+.feature-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1.2rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+/* Newsletter Section */
+.newsletter-callout {
+    background-color: #004e64;
+    color: #ffffff;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    margin: 4rem 0;
+}
+
+.newsletter-callout h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.newsletter-callout p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+}
+
+/* Testimonial Blockquote */
+.inspiration-quote {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-left: 8px solid #ff6b35;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-style: italic;
+}
+
+.inspiration-quote p {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.inspiration-quote cite {
+    font-weight: 700;
+    color: #1a365d;
+    font-style: normal;
+    display: block;
+}
+
+/* ==========================================================================
+   5. TRIPS PAGE CATALOG LAYOUT (FLEXBOX LIST)
+   ========================================================================== */
+.trips-heading {
+    text-align: center;
+    max-width: 800px;
+    margin: 4rem auto 2rem;
+    padding: 0 1.5rem;
+}
+
+.trips-heading p {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-top: 1rem;
+}
+
+.trips-catalog {
+    max-width: 1000px;
+    margin: 0 auto 5rem;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.trip-item {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    /* Stacked on mobile by default */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.trip-item img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.trip-details {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trip-details h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.trip-meta {
+    font-size: 0.95rem;
+    color: #718096;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.trip-meta strong {
+    color: #ff6b35;
+}
+
+.trip-details p {
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+}
+
+.trip-details .book-btn {
+    align-self: flex-start;
+    /* Keeps the button normal-sized instead of full-width */
+}
+
+/* ==========================================================================
+   6. SITE FOOTER
+   ========================================================================== */
+footer {
+
+    text-align: center;
+    padding: 2.5rem 2rem;
+    margin-top: auto;
+}
+
+footer p {
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease;
+}
+
+.socialmedia img:hover {
+    transform: scale(1.2);
+}
+
+/* ==========================================================================
+   7. MEDIA QUERIES (RESPONSIVE VIEWPORTS)
+   ========================================================================== */
+
+/* Tablets and Desktops */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 4.5rem;
+    }
+
+    /* Alternates side-by-side images and text cards for Trips */
+    .trip-item {
+        flex-direction: row;
+        height: 320px;
+    }
+
+    .trip-item img {
+        width: 40%;
+        max-height: 100%;
+    }
+
+    .trip-details {
+        width: 60%;
+    }
+
+    /* Makes every second trip item alternate layout direction for visual rhythm */
+    .trip-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}
