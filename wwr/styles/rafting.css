@@ -440,27 +440,6 @@ footer p {
    ========================================== */
 @media (max-width: 768px) {
 
-    header,
-    footer {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-
-    .navigation {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navigation li {
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-    }
-
-    .navigation li:last-child {
-        border-bottom: none;
-    }
-
     /* Home Layout Adjustments */
     .hero-container {
         flex-direction: column;
@@ -536,14 +515,6 @@ header {
     display: block;
 }
 
-.navigation {
-    display: flex;
-    list-style: none;
-    border: 1px solid #333;
-    /* Combined border container as seen in wireframe */
-    background-color: #fff;
-}
-
 .navigation li {
     border-right: 1px solid #333;
 }
@@ -560,6 +531,7 @@ header {
     text-align: center;
 }
 
+*/
 /* .navigation a:hover {
     background-color: #f0f0f0;
 } */
@@ -594,15 +566,13 @@ main {
     align-items: center;
 }
 
-/* Making the large hero image fill the background behind the content box */
 .hero > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+
 }
 
 .hero h1 {
@@ -913,7 +883,7 @@ header {
     width: 100%;
     height: 70vh;
     object-fit: cover;
-    filter: brightness(60%);
+
 }
 
 .hero h1 {
